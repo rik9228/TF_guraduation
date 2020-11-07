@@ -1,0 +1,18 @@
+ <?php
+    $args = array(
+      'post_type' =>
+      array('schedule'), /* カスタム投稿名を複数表示*/
+      'posts_per_page' => 4, /* 表示する数 */
+    ); ?>
+    <?php $my_query = new WP_Query($args); ?>
+    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+      <!-- ▽ ループ開始 ▽ -->
+      <dl class="schedule_list">
+        <dd><?php the_field('schedule_date'); ?></dd>
+        <dt><?php the_field('schedule_time'); ?></dt>
+        <dd><?php the_field('schedule_place'); ?></dd>
+        <dt><a href="<?php echo esc_url(home_url('/')); ?>"><?php the_field('schedule_ticket'); ?></a></dt>
+      </dl>
+      <!-- △ ループ終了 △ -->
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>

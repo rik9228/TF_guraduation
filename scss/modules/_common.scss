@@ -1,0 +1,67 @@
+body {
+  background-image: url(../img/background_image@2x.png);
+  overflow-x: hidden;
+  font-family: -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.wrap {
+  overflow-x: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.section_ttl {
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+  font-size: 4.3rem;
+  font-weight: bold;
+}
+
+.mt0 {
+  margin-top: 0px !important;
+}
+
+.btn {
+  background-color: $orange;
+  font-size: 1.4rem;
+  color: $white;
+  text-align: center;
+
+  @include sp {
+    font-size: 1.8rem;
+    line-height: 48px !important;
+    height: 48px !important;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 57px 80px;
+  line-height: 1.5;
+}

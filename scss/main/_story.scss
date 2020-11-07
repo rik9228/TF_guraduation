@@ -1,0 +1,243 @@
+.header_child_story {
+  justify-content: space-between;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 816px;
+    background-image: url(../img/story_mv@2x.png);
+    background-size: cover;
+    z-index: -5;
+
+    @include sp {
+      height: 1000px
+    }
+  }
+
+  &::after {
+    @include overlay;
+    height: 816px;
+    z-index: -5;
+
+    @include sp {
+      height: 1000px;
+    }
+  }
+
+  @include sp {
+    height: 360px;
+  }
+
+  &_contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @include sp {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &_img:first-of-type {
+    max-width: 400px;
+    height: 68px;
+  }
+
+  &_img:last-of-type {
+    max-width: 250px;
+    height: 57px;
+    margin-top: 32px;
+  }
+
+  &_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+
+    @include sp {
+      justify-content: center;
+
+    }
+
+    .btn {
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 1.2rem;
+
+      @include sp {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.story {
+
+  &_background {
+    background-image: url(../img/story_mv@2x.png);
+    position: absolute;
+    top: 0;
+    height: 80vh
+  }
+
+  &_mv {
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+    height: 435px;
+
+    @include sp {
+      height: 100%;
+      padding: 30px 0px;
+    }
+
+    & .brandcrumb {
+      margin-top: 30px;
+    }
+
+
+    &_img {
+      display: flex;
+      justify-content: space-between;
+
+
+      @include sp {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+      }
+    }
+
+    &_btn {
+      text-align: end;
+
+      .btn {
+        width: 150px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        @include btn;
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-top: 48px;
+
+        @include sp {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .section_ttl {
+      color: #fff;
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .brandcrumb_link {
+        color: #fff;
+      }
+
+
+    }
+  }
+
+  &_mv_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 52px;
+
+    @include sp {
+      flex-direction: column;
+      margin-top: 32px;
+    }
+
+    &>h2 {
+      color: #fff;
+    }
+
+    &>p {
+      width: 400px;
+      color: #fff;
+      font-size: 1.2rem;
+
+    }
+  }
+
+
+
+  &_other {
+    &_contents {
+      background-image: url(../img/story_other_01.png);
+      height: 325px;
+      background-size: cover;
+      position: relative;
+      z-index: 5;
+
+      &::before {
+        @include overlay;
+        height: 100%;
+        z-index: -5;
+      }
+
+      @include sp {
+        background-position-x: 80%;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      &:nth-of-type(2) {
+        background-image: url(../img/story_other_02.png);
+        background-position: top;
+
+        .container {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &:nth-of-type(3) {
+        background-image: url(../img/story_other_03.png);
+        margin-top: -4px;
+      }
+
+    }
+
+
+
+    &_lead {
+      color: #fff;
+      width: 390px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+
+    }
+  }
+}

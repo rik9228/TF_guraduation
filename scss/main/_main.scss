@@ -1,0 +1,707 @@
+.mv {
+  width: 100%;
+  height: 550px;
+  margin-top: 22px;
+
+
+  &_background {
+    height: 100%;
+    background-image: url(../img/mv@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  &_contents {
+    padding: 60px 0;
+
+    &>img {
+      @include sp {
+        width: 380px;
+        @include margin-auto;
+      }
+    }
+
+    &_subBlock {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 100px;
+
+      @include sp {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+      }
+
+      &>img {
+        @include sp {
+          width: 370px;
+          @include margin-auto;
+        }
+      }
+    }
+
+  }
+
+  &_TextImage {
+    width: 370px;
+    height: 85px;
+  }
+
+  &_lead {
+    width: 340px;
+    color: $white;
+    font-size: 1.4rem;
+
+    @include sp {
+      @include margin-auto;
+      margin-top: 20px;
+    }
+  }
+
+  .mv_reserve {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include sp {
+      justify-content: center;
+    }
+
+    .btn {
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      @include btn;
+      display: inline-block;
+
+      @include sp {
+        line-height: 48px;
+        width: 90%;
+      }
+
+    }
+
+
+  }
+
+}
+
+.about {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding: 30px 0px;
+
+  &::before {
+    @include overlay;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+    z-index: -5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../img/about_image.png);
+    background-repeat: no-repeat;
+    z-index: -5;
+  }
+
+  &_ttls {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  &_subTtl {
+    font-weight: normal;
+    color: #000;
+  }
+
+  &_text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-top: 8px;
+
+    @include sp {
+      flex-direction: column;
+    }
+  }
+
+  &_lead {
+    font-size: 1.2rem;
+    columns: 2;
+    column-gap: 1.5em;
+
+    @include sp {
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    &:nth-of-type(2) {
+      @include sp {
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.video iframe {
+  margin-top: 48px;
+  width: 100%;
+  height: 624px;
+}
+
+.news {
+  margin-top: 56px;
+
+  .ttl_contents {
+    width: 50%;
+    margin-left: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    .section_ttl {
+      transform: translateX(-50%);
+    }
+
+    .btn {
+      @include btn;
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      display: block;
+
+      @include sp {
+        display: none;
+      }
+    }
+
+  }
+
+  &_card_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include sp {
+      flex-direction: column;
+    }
+  }
+
+
+  &_card {
+    width: 250px;
+
+
+    @include sp {
+      width: 100%;
+    }
+
+    &:nth-of-type(1n+2) {
+      @include sp {
+        margin-top: 32px;
+      }
+    }
+    .card_caption {
+      background-color: #fff;
+      padding: 15px;
+      height: 120px;
+      color: #000;
+
+      &>dt {
+        font-size: 1.2rem;
+      }
+
+      &>dd {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+
+  &_subcard_contents {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+      flex-direction: column;
+    }
+  }
+
+  &_subcard {
+    display: flex;
+    width: 390px;
+    height: 88px;
+    background-color: #fff;
+    margin-top: 30px;
+    color: #000;
+
+    @include sp {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .subcard_image {
+      object-fit: cover;
+      width: 156px;
+
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    .subcard_caption {
+      padding: 15px;
+      color: #000;
+
+      @include sp {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+
+    @include sp {
+      display: block;
+      line-height: 48px;
+      text-align: center;
+      margin-top: 32px;
+    }
+  }
+
+
+}
+
+
+
+
+.story {
+  margin-top: 62px;
+  padding: 30px 0;
+  background-image: url(../img/stroy_image@2x.png);
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+
+  @include sp {
+    &::before {
+      @include overlay;
+      height: 100%;
+      z-index: -5;
+    }
+  }
+
+  &_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 48px;
+
+    @include sp {
+      margin-top: 32px;
+    }
+
+    .btn {
+      width: 115px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      margin-left: auto;
+
+      @include sp {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .section_ttl {
+    color: #fff;
+  }
+
+  &_lead {
+    color: #fff;
+    width: 320px;
+    margin-left: auto;
+    margin-top: 18px;
+    font-size: 1.2rem;
+
+    @include sp {
+      width: 100%;
+      @include margin-auto;
+    }
+  }
+}
+
+.comments {
+  margin-top: 55px;
+
+  .section_subttl {
+    font-size: 2.6rem;
+    font-weight: normal;
+    text-align: center;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &_card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 214px;
+    margin-top: 30px;
+    position: relative;
+
+    @include sp {
+      display: none;
+      height: 100%;
+    }
+
+
+    &_text {
+      width: 420px;
+      padding-left: 30px;
+
+      @include sp {
+        width: 100%;
+        @include margin-auto;
+      }
+    }
+
+    &_span {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    &_ttl {
+      font-size: 2.6rem;
+      font-weight: normal;
+    }
+
+    &_lead {
+      font-size: 1.4rem;
+    }
+
+
+  }
+
+  &_img {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+
+  }
+
+  &_card_sp {
+    display: none;
+    background-image: url(../img/comments_card@2x.png);
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+
+    @include sp {
+      display: block;
+      margin-top: 55px;
+    }
+  }
+
+
+
+  .comments_card_text_sp {
+    display: none;
+
+    @include sp {
+      display: block;
+      background-color: $Navy;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .comments_card_ttl_sp {
+      font-size: 2.8rem;
+    }
+
+    .comments_card_span_sp {
+      font-size: 2rem;
+    }
+
+    .comments_btn_sp {
+      display: none;
+
+      @include sp {
+        display: block;
+      }
+
+      .btn {
+        display: block;
+        text-align: center;
+        height: 48px;
+        line-height: 48px;
+        margin-top: 32px;
+      }
+    }
+
+  }
+
+
+
+
+  &_btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 75%;
+
+    .btn {
+      margin-right: 14px;
+      width: 115px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      margin-left: auto;
+    }
+  }
+}
+
+.cast_main {
+  margin-top: 55px;
+  position: relative;
+  z-index: 5;
+  padding-bottom: 60px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: -70%;
+    width: 200vw;
+    height: 650px;
+    background-color: #fff;
+    z-index: -10;
+
+    @include sp {
+      top: 10%;
+      height: 92%;
+    }
+  }
+
+  &_card {
+    width: 250px;
+
+    @include sp {
+      width: 100%;
+    }
+
+    &:nth-of-type(1n+2) {
+      @include sp {
+        margin-top: 48px;
+      }
+    }
+
+
+    &>ul {
+      text-align: center;
+      margin-top: 36px;
+
+      .cast_cat {
+        font-size: 1.6rem;
+      }
+
+      .cast_name {
+        font-size: 1.8rem;
+
+        @include sp {
+          font-size: 2.2rem;
+          font-weight: bold;
+        }
+      }
+
+      .cast_type {
+        font-size: 1.2rem;
+      }
+    }
+
+    &>img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      margin: 0 auto;
+      border-radius: 100%;
+    }
+
+    &_contents {
+      display: flex;
+      justify-content: space-between;
+
+      @include sp {
+        flex-direction: column;
+        margin-top: 32px;
+      }
+
+    }
+  }
+
+  &_ttl {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 1.8rem;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &_span {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  &_name {
+    font-size: 1.6rem;
+  }
+
+  &_cat {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+
+  &_lead {
+    font-size: 1.2rem;
+    margin-top: 16px;
+
+
+  }
+
+  &_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+
+    .btn {
+      border: 5px solid $orange;
+      background-color: #fff;
+      color: $orange;
+      position: relative;
+      width: 115px;
+      text-align: center;
+      line-height: 35px;
+      z-index: 5;
+
+      @include sp {
+        width: 100%;
+        font-size: 1.8rem;
+      }
+
+    }
+  }
+}
+
+.schedule {
+  margin-top: 60px;
+  position: relative;
+
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 57px 80px;
+    line-height: 1.5;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    width: 625px;
+    @include margin-auto;
+    margin-top: 18px;
+    font-size: 2rem;
+
+    &:nth-of-type(1n+2) {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &>dt>a {
+      color: #000;
+      text-decoration-line: underline;
+
+      @include sp {
+        display: block;
+        margin-top: 0.8rem;
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &_btns {
+    width: 418px;
+    display: flex;
+    justify-content: space-between;
+    @include margin-auto;
+    margin-top: 30px;
+
+    @include sp {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn {
+      width: 190px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+
+      @include sp {
+        width: 100%;
+        @include margin-auto;
+      }
+
+      &:first-of-type {
+        background-color: $Burgundy;
+      }
+
+      &:last-of-type {
+        margin-left: 30px;
+
+        @include sp {
+          margin-left: 0;
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

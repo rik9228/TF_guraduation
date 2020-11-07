@@ -1,0 +1,18 @@
+// 分割ファイルの記載
+// 別途ファイル名は_functions.scssのように文頭に"_"を記載。
+// preprosの仕様を忘れない。
+
+@import './mixin/mixin';
+@import'./base\,reset/reset';
+@import'./base\,reset/base';
+@import './modules/common';
+@import './modules/header';
+@import './modules/footer';
+@import './main/main';
+@import './main/news';
+@import './main/single';
+@import './main/story';
+@import './main/comments';
+@import './main/cast';
+@import './main/inquiry';
+@import './main/confirm';

@@ -1,0 +1,64 @@
+// コンポーネント化できるものを記述
+
+// 使用方法：任意のセレクタに
+// @include sp{
+//     width:300px;
+// }
+// のように記述。
+
+$pc: 1024px;
+$tab: 680px;
+$sp: 560px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+@mixin margin-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@mixin overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@mixin hoverEffect {
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+@mixin btn {
+  background-color: $orange;
+  font-size: 1.4rem;
+  color: $white;
+}
+
+
+
+
+$white:#ffffff;
+$Navy:#333333;
+$Burgundy:#421f15;
+$orange:#c63205;

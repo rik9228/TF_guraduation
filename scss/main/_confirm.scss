@@ -1,0 +1,15 @@
+.confirm {
+
+  @include sp {
+    margin-top: 55px;
+  }
+
+  &_contents.overlay {
+    padding: 30px;
+  }
+
+  &_contents {
+    text-align: center;
+
+  }
+}

@@ -1,0 +1,111 @@
+.single_card {
+
+  &>img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+  }
+
+
+
+  &_ttl {
+    background-color: #000;
+    color: #fff;
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: 10px 30px;
+
+
+      &>dt {
+        font-size: 12px;
+      }
+
+      &>dd {
+        font-size: 26px;
+      }
+    }
+  }
+
+
+  &_content {
+    background-color: #ffffff;
+    padding: 30px 25px;
+  }
+
+}
+
+.pagenation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include sp {
+    flex-direction: column;
+  }
+
+  &_contents {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    @include sp {
+      justify-content: center;
+    }
+
+
+    &>a {
+      background-color: #000;
+      display: block;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 100px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+
+    &:first-of-type {
+      margin-left: -10px;
+    }
+
+    &:last-of-type {
+      margin-right: -10px;
+      text-align: end;
+    }
+
+    &:last-of-type {
+      flex-direction: row-reverse;
+    }
+
+
+    &>dl {
+      font-size: 1.6rem;
+
+      &>dt>a {
+        color: #000;
+      }
+
+      &>dd>a {
+        color: #000;
+      }
+    }
+  }
+
+
+
+  .fa,
+  .fas {
+    font-size: 4rem;
+    color: #000;
+  }
+
+
+
+}
